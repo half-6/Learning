@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +28,7 @@ namespace ConsoleApp1
 
             ListOperations.Run();
 
-            //var cat1 = new Cat();
-            //cat1.Name = "yu ling";
+            var cat1 = new Cat("yu ling");
 
             //var worlf1 = new Wolf();
             //worlf1.Name = "jiayi";
@@ -54,6 +54,7 @@ namespace ConsoleApp1
             //world.AllRun();
 
             Console.ReadLine();
+
         }
 
     }
