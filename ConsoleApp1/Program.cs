@@ -25,35 +25,33 @@ namespace ConsoleApp1
             //Console.WriteLine($"Delete 1 from Hello => {output}");
 
 
-            var cat1 = new Cat();
-            cat1.Name = "yu ling";
-            //Console.WriteLine(cat1.Name);
-            //cat1.Run();
+            ListOperations.Run();
+
+            //var cat1 = new Cat();
+            //cat1.Name = "yu ling";
+
+            //var worlf1 = new Wolf();
+            //worlf1.Name = "jiayi";
+
+            //var worlf2 = new Wolf();
+            //worlf2.Name = "jun zhang";
+
+            //var worlf3 = new Wolf();
+            //worlf3.Name = "grama zhang";
 
 
-            var worlf1 = new Wolf();
-            worlf1.Name = "jiayi";
-            //worlf1.Bark();
 
-            var worlf2 = new Wolf();
-            worlf2.Name = "jun zhang";
+            //var world = new World();
 
-            var worlf3 = new Wolf();
-            worlf3.Name = "grama zhang";
-            //worlf2.Bark();
+            //world.Cats.Add(cat1);
+            //world.Worlfs.Add(worlf1);
+            //world.Worlfs.Add(worlf2);
+            //world.Worlfs.Add(worlf3);
 
+            //Console.WriteLine(world.Worlfs.Count);
+            //Console.WriteLine(world.Cats.Count);
 
-            var world = new World();
-
-            world.Cats.Add(cat1);
-            world.Worlfs.Add(worlf1);
-            world.Worlfs.Add(worlf2);
-            world.Worlfs.Add(worlf3);
-
-            Console.WriteLine(world.Worlfs.Count);
-            Console.WriteLine(world.Cats.Count);
-
-            world.AllRun();
+            //world.AllRun();
 
             Console.ReadLine();
         }
