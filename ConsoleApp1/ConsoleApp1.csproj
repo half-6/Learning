@@ -43,16 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Cat.cs" />
-    <Compile Include="Dragon.cs" />
-    <Compile Include="ListOperations.cs" />
+    <Compile Include="Lesson2\Animal.cs" />
+    <Compile Include="Lesson2\Cat.cs" />
+    <Compile Include="Lesson2\Dragon.cs" />
+    <Compile Include="Lesson2\ListOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Season.cs" />
-    <Compile Include="StringOperations.cs" />
-    <Compile Include="Wolf.cs" />
-    <Compile Include="World.cs" />
+    <Compile Include="Lesson2\Season.cs" />
+    <Compile Include="Lesson1\StringOperations.cs" />
+    <Compile Include="Lesson2\Wolf.cs" />
+    <Compile Include="Lesson2\World.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
