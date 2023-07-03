@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     internal class Dragon : Animal
     {
-        public Dragon()
+        public Dragon(string name) : base(name)
         {
             this.Legs = 8;
         }

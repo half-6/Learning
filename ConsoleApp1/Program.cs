@@ -26,9 +26,10 @@ namespace ConsoleApp1
             //Console.WriteLine($"Delete 1 from Hello => {output}");
 
 
-            ListOperations.Run();
+            var arrOperation = new ArrayOperation();
+            arrOperation.Run();
 
-            var cat1 = new Cat("yu ling");
+            //var cat1 = new Cat("yu ling");
 
             //var worlf1 = new Wolf();
             //worlf1.Name = "jiayi";
@@ -52,6 +53,8 @@ namespace ConsoleApp1
             //Console.WriteLine(world.Cats.Count);
 
             //world.AllRun();
+
+
 
             Console.ReadLine();
 
