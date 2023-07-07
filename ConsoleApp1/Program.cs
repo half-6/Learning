@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ConsoleApp1.Lesson4;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +28,8 @@ namespace ConsoleApp1
             //Console.WriteLine($"Delete 1 from Hello => {output}");
 
 
-            var arrOperation = new ArrayOperation();
-            arrOperation.Run();
+            //var arrOperation = new ArrayOperation();
+            //arrOperation.Run();
 
             //var cat1 = new Cat("yu ling");
 
@@ -55,6 +57,34 @@ namespace ConsoleApp1
             //world.AllRun();
 
 
+
+            //string[] list = { "Gordon", "Enaudi", "Gordon", "Saint-Saens", "Gordon" };
+
+
+            //// Select (Selects Gordon)
+            //for (var i = 0; i < list.Length; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+            var myNotebook = new Notebook();
+
+            var person1 = new Person();
+            person1.Salary = 10;
+            person1.Age = 20;
+
+            var person3 = new Person();
+            person3.Salary = 20;
+            person3.Age = 50;
+
+            myNotebook.PersonList.Add(person1);
+            myNotebook.PersonList.Add(person3);
+
+
+
+            Console.WriteLine("The average salary for all employees is: " + myNotebook.GetAvgSalary());
+            Console.WriteLine("The avergage age for all employees is: " + myNotebook.GetAvgAge());
 
             Console.ReadLine();
 

@@ -36,11 +36,11 @@ namespace ConsoleApp1
             string[] output = new string[list.Length - 1];
             for (var i = 0; i < list.Length; i++)
             {
-                if ((i < index))
+                if (i < index)
                 {
                     output[i] = list[i];
                 }
-                if ((i > index))
+                if (i > index)
                 {
                     output[i-1] = list[i];
                 }

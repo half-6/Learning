@@ -48,6 +48,9 @@
     <Compile Include="Lesson2\Cat.cs" />
     <Compile Include="Lesson2\Dragon.cs" />
     <Compile Include="Lesson2\ListOperations.cs" />
+    <Compile Include="Lesson4\Gender.cs" />
+    <Compile Include="Lesson4\Notebook.cs" />
+    <Compile Include="Lesson4\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lesson2\Season.cs" />
@@ -58,5 +61,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
