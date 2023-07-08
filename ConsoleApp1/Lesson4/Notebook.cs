@@ -12,14 +12,32 @@ namespace ConsoleApp1.Lesson4
 
         public decimal GetAvgSalary()
         {
+            if (PersonList.Count == 0)
+            {
+                return 0;
+            }
+            decimal count = 0;
+            foreach (var person in PersonList)
+            {
+                count += person.Salary;
+            }
             
-            return 1;
+            return  Math.Round(count / PersonList.Count);
         }
 
 
         public decimal GetAvgAge()
         {
-            return 0;
+            if (PersonList.Count == 0)
+            {
+                return 0;
+            }
+            decimal count = 0;
+            foreach (var person in PersonList)
+            {
+                count += person.Age;
+            }
+            return Math.Round(count / PersonList.Count);
         }
     }
 }
