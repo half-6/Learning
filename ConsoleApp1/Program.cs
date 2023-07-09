@@ -1,6 +1,7 @@
 ﻿using ConsoleApp1.Lesson4;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -68,23 +69,35 @@ namespace ConsoleApp1
             //}
 
 
-            var myNotebook = new Notebook();
 
-            var person1 = new Person();
-            person1.Salary = 10;
-            person1.Age = 20;
+            //var myNotebook = new Notebook();
 
-            var person3 = new Person();
-            person3.Salary = 20;
-            person3.Age = 50;
+            //var person1 = new Person();
+            //person1.Salary = 10;
+            //person1.Age = 20;
 
-            myNotebook.PersonList.Add(person1);
-            myNotebook.PersonList.Add(person3);
+            //var person3 = new Person();
+            //person3.Salary = 20;
+            //person3.Age = 50;
+
+            //myNotebook.PersonList.Add(person1);
+            //myNotebook.PersonList.Add(person3);
 
 
 
-            Console.WriteLine("The average salary for all employees is: " + myNotebook.GetAvgSalary());
-            Console.WriteLine("The avergage age for all employees is: " + myNotebook.GetAvgAge());
+            //Console.WriteLine("The average salary for all employees is: " + myNotebook.GetAvgSalary());
+            //Console.WriteLine("The avergage age for all employees is: " + myNotebook.GetAvgAge());
+
+            string fileName = args[0];
+            //var myNotebook = new Notebook(fileName);
+
+            //Console.WriteLine("The average salary for all employees is: " + myNotebook.GetAvgSalary());
+            //Console.WriteLine("The average male salary for all employees is: " + myNotebook.GetAvgSalary(Gender.Male));
+            //Console.WriteLine("The average female salary for all employees is: " + myNotebook.GetAvgSalary(Gender.Female));
+            //Console.WriteLine("The avergage age for all employees is: " + myNotebook.GetAvgAge());
+
+
+            NoClass.CountNotebook(fileName);
 
             Console.ReadLine();
 

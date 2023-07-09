@@ -1,0 +1,5 @@
+﻿name,age,gender,salary
+person1,10,male,100
+person2,20,female,200
+person3,30,male,300
+person4,40,male,400
