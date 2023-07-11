@@ -88,7 +88,7 @@ namespace ConsoleApp1
             //Console.WriteLine("The average salary for all employees is: " + myNotebook.GetAvgSalary());
             //Console.WriteLine("The avergage age for all employees is: " + myNotebook.GetAvgAge());
 
-            string fileName = args[0];
+            //string fileName = args[0];
             //var myNotebook = new Notebook(fileName);
 
             //Console.WriteLine("The average salary for all employees is: " + myNotebook.GetAvgSalary());
@@ -97,11 +97,14 @@ namespace ConsoleApp1
             //Console.WriteLine("The avergage age for all employees is: " + myNotebook.GetAvgAge());
 
 
-            NoClass.CountNotebook(fileName);
+            //NoClass.CountNotebook(fileName);
+
+            ListOperations.Run();
+
 
             Console.ReadLine();
 
         }
-
+        
     }
 }

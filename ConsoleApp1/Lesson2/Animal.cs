@@ -16,6 +16,8 @@ namespace ConsoleApp1
         {
             this.Name = name;
         }
+
+        //property
         public int Legs { get; protected set; }
 
         public string Name { get;  set; }
