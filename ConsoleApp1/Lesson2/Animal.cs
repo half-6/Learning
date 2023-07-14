@@ -8,6 +8,10 @@ namespace ConsoleApp1
 {
     internal class Animal
     {
+
+        // protcect level + type + variable name = value
+
+
         // private member
         int score = 0;
 
@@ -31,6 +35,7 @@ namespace ConsoleApp1
         //    set { name = value; }  // set method
         //}
 
+        //method/function
         public void Run() {
             Console.WriteLine("running...");
             Console.WriteLine("running...");
