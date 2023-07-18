@@ -19,31 +19,57 @@ namespace Storage_Management
             {
                 if (String.Equals(input,"List",StringComparison.CurrentCultureIgnoreCase))
                 {
-                    Console.WriteLine(myStorage.ShowAll());
+                    Console.WriteLine(String.Join(",", myStorage.ShowAll()));
                 }
                 if (input.StartsWith("Add ", StringComparison.CurrentCultureIgnoreCase) || input.StartsWith("insert ", StringComparison.CurrentCultureIgnoreCase))
                 {
-                    var addition = input.Substring(4);
-                    myStorage.Add(addition);
-                    Console.WriteLine("Add success");
+                    // add fruit apple 
+                    // add <category> <name> <size>
+                    var addition = new StorageItem();
+                    var sep = input.Split(' ');
+                    addition.Name = sep[2];
+                    addition.Category = sep[1];
+                    //addition.Size = Convert.ToInt16(sep[3]);
+
+                    if (myStorage.Add(addition))
+                    {
+                        Console.WriteLine("Add success");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Add failed");
+                    }
+                    
                 }
                 if (input.StartsWith("Delete ", StringComparison.CurrentCultureIgnoreCase) || input.StartsWith("remove ", StringComparison.CurrentCultureIgnoreCase))
                 {
                     var deleted = input.Substring(7);
-                    myStorage.Delete(deleted);
-                    Console.WriteLine("Delete success");
+                    if (myStorage.Delete(deleted))
+                    {
+                        Console.WriteLine("Delete success");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Delete failed");
+                    }
+                    
                 }
                 if (input.StartsWith("Search ", StringComparison.CurrentCultureIgnoreCase))
                 {
                     var searched = input.Substring(7);
                     var found = myStorage.Search(searched);
-                    if (found.Length == 0)
+
+                    //var myItem = new StorageItem();
+                    //myItem.Name = "123";
+                    //Console.WriteLine(myItem);
+
+                    if (found.Count == 0)
                     {
                         Console.WriteLine("Not found");
                     }
                     else
                     {
-                        Console.WriteLine(found);
+                        Console.WriteLine(string.Join("|", found));
                     }
                     
                 }

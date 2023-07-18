@@ -12,15 +12,19 @@ namespace ConsoleApp1
         // protcect level + type + variable name = value
 
 
-        // private member
+        // private member / variable
         int score = 0;
+
+        string abc;
+
+        List<int> myBox = new List<int>();
 
         //constructor
         public Animal(string name)
         {
             this.Name = name;
         }
-
+       
         //property
         public int Legs { get; protected set; }
 
@@ -41,6 +45,28 @@ namespace ConsoleApp1
             Console.WriteLine("running...");
             Console.WriteLine("running...");
             Console.WriteLine($"{this.Name} is running...");
+        }
+
+        public void Yall(string message)
+        {
+            Console.WriteLine($"{this.Name} {message}...");
+        }
+
+        public int Sum(int num1, int num2)
+        {
+            int count = num1 + num2;
+            Console.WriteLine($"it is {count}...");
+            return count;
+        }
+
+        public int Max(int[] nums)
+        {
+            return 1;
+        }
+
+        public int Max(List<int> nums)
+        {
+            return 1;
         }
     }
 }

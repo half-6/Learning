@@ -9,38 +9,39 @@ namespace Storage_Management
 {
     internal class Storage
     {
-        List<string> box = new List<string>();
-        public string ShowAll()
-        {
-            return String.Join(",", box);
+        List<StorageItem> box = new List<StorageItem>();
+        public List<StorageItem> ShowAll() 
+        { 
+            return box;
         }
-        public void Add(string item)
+        public bool Add(StorageItem item)
         {
             box.Add(item);
+            return true;
         }
-        public void Delete(string item)
+        public bool Delete(String itemName)
         {
-            box.Remove(item);
-        }    
-        public string Search(string item)
-        {
-            if (box.IndexOf(item) == -1)
-            {
-                return "";
-            }
-            var number = 0;
             foreach (var things in box)
             {
-                if (things == item)
+                if (things.Name.Equals(itemName, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    number++;
+                    box.Remove(things);
+                    return true;
                 }
             }
-            if (number == 1)
+            return false;
+        }
+        public List<StorageItem> Search(String itemName)
+        {
+            var found = new List<StorageItem>();
+            foreach (var things in box)
             {
-                return "There is " + number + " " + item + " in the box.";
+                if (things.Name.Equals(itemName,StringComparison.CurrentCultureIgnoreCase))
+                {
+                    found.Add(things);
+                }
             }
-            return "There are " + number + " " + item + "s in the box.";
+            return found;
         }
     }
 }
