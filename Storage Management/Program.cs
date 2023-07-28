@@ -12,7 +12,7 @@ namespace Storage_Management
         static void Main(string[] args)
         {
             Console.WriteLine(" Welcome to Storage Management.");
-            var myStorage = new Storage();
+            Storage myStorage = new Storage();
             Console.WriteLine("Please enter operations.");
             var input = Console.ReadLine();
             while (input.Length > 0)
@@ -77,6 +77,67 @@ namespace Storage_Management
                 input = Console.ReadLine();
             }
 
+            Dictionary<string, int> years = new Dictionary<string, int>();
+            years.Add("John", 2007);
+            Console.WriteLine(years["John"]);
+            // Consoles out 2007
+
+            Queue<String> frog = new Queue<String>();
+            frog.Enqueue("toadstool");
+            Console.WriteLine(frog.Peek());
+
+            List<int> numbers = new List<int>();
+            numbers.Add(2);
+            Console.WriteLine(numbers[0]);
+
+
+        }
+
+        public int SeriesSum(int num)
+        {
+            int sum = 0;
+
+            for (int i = 1; i <= Math.Abs(num); i++)
+            {
+                sum += i;
+            }
+
+            if (num <= 0)
+            {
+                return sum * -1;
+            }
+               
+
+            return sum;
+        }
+
+        public int AbsoluteSum(int[] arr)
+        {
+            int result = 0;
+
+            int index = 0;
+            foreach (int num in arr)
+            {
+                if (index == 2)
+                {
+                    continue;
+                }
+                result += Math.Abs(num);
+                index++;
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i == 2)
+                {
+                    continue;
+                }
+                var num = arr[i];
+                result += Math.Abs(num);
+            }
+                
+
+            return result;
         }
     }
 }

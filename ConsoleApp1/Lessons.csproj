@@ -52,6 +52,7 @@
     <Compile Include="Lesson4\NoClass.cs" />
     <Compile Include="Lesson4\Notebook.cs" />
     <Compile Include="Lesson4\Person.cs" />
+    <Compile Include="Lesson6\Lesson6.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lesson2\Season.cs" />
