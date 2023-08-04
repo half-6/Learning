@@ -99,8 +99,11 @@ namespace ConsoleApp1
 
             //NoClass.CountNotebook(fileName);
 
-            ListOperations.Run();
+            //ListOperations.Run();
 
+
+            Lesson8 lesson8 = new Lesson8();
+            lesson8.ExceptionTester();
 
             Console.ReadLine();
 
